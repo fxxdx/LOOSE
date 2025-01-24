@@ -1,5 +1,11 @@
-# LOOSE
+# LOOSE: Optimal Model Selection for Multivariate Time Series Forecasting
  
+Our work first compiles a large and heterogeneous labeled model selection dataset (called Model Selection Stack) across 10 domains. Furthermore, we propose a universal Large model-enabled Optimal mOdel SElection method (LOOSE). The framwork of LOOSE is as follow:
+<div align="center">
+<img alt="Logo" src="misc/framework.png" width="100%"/>
+</div>
+LOOSE transforms the multivariate time series forecasting (MTSF) model selection problem into a time series classification problem and uses the Model Selection Stack to unlock large-scale multi-dataset training.
+
 ## Requirmenets
 - Python3.10
 - Pytorch==1.13.1
@@ -13,7 +19,7 @@ We used 25 multivariate time series datasets in the  [TFB](https://dl.acm.org/do
 
 ## Construct Model Selection Stack
 
-Firstly, the rolling forecasting strategy is used to test the forecasting performance of 16 multivariate time series forecasting (MTSF) methods on 25 datasets
+Firstly, the rolling forecasting strategy is used to test the forecasting performance of 16 MTSF methods on 25 datasets
 We provide the scripts for 16 MTSF methods in the folder `./scripts/multivariate_forecast`. In this foloder, scripts are grouped by horizon. For example, you can reproduce a experiment result with horizon 96 on AQShunyi dataset as the following:
 
 ```shell
