@@ -133,7 +133,7 @@ if __name__ == "__main__":
 	parser.add_argument('-ho', '--horizon', type=int, help='batch size', default=60)
 	parser.add_argument('-lo', '--lookback', type=int, help='batch size', default=336)
 	parser.add_argument('-win', '--window_size', type=int, help='window_size', default=100)
-	parser.add_argument('-n', '--model_name', type=str, help='model name', default='moment')
+	parser.add_argument('-n', '--model_name', type=str, help='model name', default='loose')
 
 	args = parser.parse_args()
 

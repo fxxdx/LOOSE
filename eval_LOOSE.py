@@ -127,8 +127,8 @@ if __name__ == "__main__":
 			and save the results'
 	)
 	
-	parser.add_argument('-d', '--data', type=str, help='path to the time series to predict',default = 'dataset/Forecasting_396/')
-	parser.add_argument('-m', '--model', type=str, help='model to run', default='moment')
+	parser.add_argument('-d', '--data', type=str, help='path to the time series to predict',default = 'dataset/Forecasting_396_100/')
+	parser.add_argument('-m', '--model', type=str, help='model to run', default='loose')
 	parser.add_argument('-mp', '--model_path', type=str, help='path to the trained model', default = 'results/weights/')
 	parser.add_argument('-pa', '--params', type=str, help="a json file with the model's parameters", default='results/weights/')
 	parser.add_argument('-ps', '--path_save', type=str, help='path to save the results', default="results/raw_predictions")

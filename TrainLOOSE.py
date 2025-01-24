@@ -60,15 +60,10 @@ def load_moment(n_channels):
 def train_deep_model(
         data_path,
         model_name,
-        split_per,
-        seed,
-        read_from_file,
         batch_size,
-        model_parameters_file,
         epochs,
         horizon,
         lookback,
-        eval_model=True,
 ):
     # Set up
     window_size = int(re.search(r'\d+', str(args.path)).group())
@@ -153,7 +148,7 @@ if __name__ == "__main__":
         description='This function is made so that we can easily run configurable experiments'
     )
 
-    parser.add_argument('-p', '--path', type=str, help='path to the dataset to use', default='dataset/Forecasting_372/')
+    parser.add_argument('-p', '--path', type=str, help='path to the dataset to use', default='dataset/Forecasting_432_60/')
     parser.add_argument('-s', '--split', type=float, default=0.7, help='split percentage for train and val sets')
     parser.add_argument('-se', '--seed', type=int, default=None, help='Seed for train/val split')
     parser.add_argument('-f', '--file', type=str, default=None, help='path to file that contains a specific split')
@@ -170,14 +165,9 @@ if __name__ == "__main__":
     args = parser.parse_args()
     train_deep_model(
         data_path=args.path,
-        split_per=args.split,
-        seed=args.seed,
-        read_from_file=args.file,
         model_name=args.model,
-        model_parameters_file=args.params,
         batch_size=args.batch,
         epochs=args.epochs,
-        eval_model=args.eval_true,
         horizon = args.horizon,
         lookback = args.lookback
     )
