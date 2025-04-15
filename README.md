@@ -19,7 +19,7 @@ We used 25 multivariate time series datasets in the  [TFB](https://dl.acm.org/do
 
 ## Construct Model Selection Stack
 
-Firstly, the rolling slice and forecasting strategy are used to test the forecasting performance of 16 MTSF methods on 25 datasets
+Firstly, rolling slice and forecasting strategy are used to test the forecasting performance of 16 MTSF methods on 25 datasets
 We provide the scripts for 16 MTSF methods in the folder `./scripts/multivariate_forecast`. In this foloder, scripts are grouped by horizon. For example, you can reproduce a experiment result with horizon 96 on AQShunyi dataset as the following:
 
 ```shell
